@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Last Try</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="heart-field" id="heartField" aria-hidden="true"></div>
+
+    <main class="site-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <nav class="topbar" aria-label="Proposal controls">
+          <span class="brand">For <span data-her-name>Jyoti</span></span>
+          <button class="icon-btn" id="musicToggle" type="button" aria-label="Toggle music">
+            <span class="music-on" aria-hidden="true">♪</span>
+            <span class="music-off" aria-hidden="true">×</span>
+          </button>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">A small surprise for one special person</p>
+            <h1 id="hero-title">One last honest try, with hope in my heart.</h1>
+            <p class="intro">
+              I made this for you because some feelings deserve more than a simple message.
+              <!-- Please open the letter first, then read it slowly. -->
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn" type="button" data-open-letter>Open the envelope</button>
+            </div>
+          </div>
+
+          <div class="orbit-scene" aria-label="Animated love letter">
+            <div class="ring ring-one"></div>
+            <div class="ring ring-two"></div>
+            <button class="envelope-scene" id="openLetterBtn" type="button" aria-label="Open my love letter" aria-expanded="false">
+              <span class="envelope">
+                <span class="envelope-back"></span>
+                <span class="letter">
+                  <span class="letter-kicker">My feeling</span>
+                  <span class="letter-title">Dear <span data-her-name>Jyoti</span>,</span>
+                  <span class="letter-lines">
+                    <span></span><span></span><span></span><span></span>
+                  </span>
+                  <span class="letter-sign">- <span data-your-name>Abhay</span></span>
+                </span>
+                <span class="envelope-flap"></span>
+                <span class="envelope-front"></span>
+                <span class="seal">❤</span>
+              </span>
+            </button>
+            <div class="tap-hint" id="tapHint">Tap the envelope</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter-section" id="letter" aria-labelledby="letter-title">
+        <div class="love-letter">
+          <p class="eyebrow">A letter from my heart</p>
+          <h2 id="letter-title">What my heart wants to tell you</h2>
+          <div class="flip-letter-card" id="letterCard" aria-expanded="false">
+            <button class="letter-card-face letter-card-front" id="flipLetterBtn" type="button">
+              <span class="front-badge">Click to open</span>
+              <span class="cartoon-scene" aria-hidden="true">
+                <span class="cartoon-person cartoon-abhay">
+                  <span class="cartoon-head"></span>
+                  <span class="cartoon-body"></span>
+                </span>
+                <span class="cartoon-heart">❤</span>
+                <span class="cartoon-person cartoon-jyoti">
+                  <span class="cartoon-head"></span>
+                  <span class="cartoon-body"></span>
+                </span>
+              </span>
+              <span class="front-title">Jyoti, I wrote this for you</span>
+              <span class="front-subtitle">Warning: this card contains honest feelings and one nervous Abhay.</span>
+            </button>
+
+            <div class="letter-card-face letter-card-back">
+              <div class="letter-paper interactive-paper" id="interactiveLetter">
+                <div class="paper-topline">
+                  <p>Dear <span data-her-name>Jyoti</span>,</p>
+                  <div class="letter-progress" aria-label="Letter progress">
+                    <span class="is-active"></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+                <p class="letter-part is-visible">
+                  I do not know exactly what you are thinking about me right now. Maybe I am not too handsome as other guys, maybe you dislike me, maybe you are
+                  unsure, maybe you are still observing me, or maybe you need more time. But I
+                  want to say one honest thing: for me, you are special.
+                </p>
+                <p class="letter-part">
+                  Whatever has happened between us, I do not want to keep any small
+                  thing in my heart. I want to forget the things that hurt, remember
+                  the things that made me smile, and move forward with peace.
+                </p>
+                <p class="letter-part">
+                  I know you have your own life, thoughts, past, dreams, fears, and your own way
+                  of seeing the world. I am not asking you to become someone else for me. I am
+                  accepting you as you are, with respect, patience, and a sincere feeling.
+                </p>
+                <p class="letter-part">
+                  I cannot promise that life will always be easy, but I can promise that I will
+                  try to understand you, listen to you, stand beside you, and never make you feel
+                  alone in this journey.
+                </p>
+                <p class="letter-part">
+                  I am not asking for a perfect answer in a hurry. I am asking for a chance to
+                  know you more deeply, care for you honestly, and turn this beginning into
+                  something beautiful.
+                </p>
+                <button class="reveal-btn" id="revealLetterBtn" type="button">Reveal next feeling</button>
+                <p class="signature">With respect and hope,<br /><span data-your-name>Abhay</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="story" aria-labelledby="story-title">
+        <div class="section-heading">
+          <p class="eyebrow">Why you matter</p>
+          <h2 id="story-title">The little things that stayed with me</h2>
+        </div>
+
+        <div class="memory-grid">
+          <button class="memory-card flip-memory" type="button" aria-pressed="false">
+            <span class="memory-face memory-front">
+              <span class="memory-number">01</span>
+              <span class="memory-icon" aria-hidden="true">✦</span>
+              <span class="memory-title">Your presence</span>
+              <span class="memory-hint">Tap to read</span>
+            </span>
+            <span class="memory-face memory-back">
+              <span class="memory-title">You feel different</span>
+              <span class="memory-copy">
+                There is something calm and special about you. Even before knowing everything,
+                I felt that Jyoti was not someone ordinary to me.
+              </span>
+            </span>
+          </button>
+          <button class="memory-card flip-memory" type="button" aria-pressed="false">
+            <span class="memory-face memory-front">
+              <span class="memory-number">02</span>
+              <span class="memory-icon" aria-hidden="true">♡</span>
+              <span class="memory-title">Your truth</span>
+              <span class="memory-hint">Tap to read</span>
+            </span>
+            <span class="memory-face memory-back">
+              <span class="memory-title">I accept you</span>
+              <span class="memory-copy">
+                I respect the person you are today, including the parts of life that made you
+                stronger. I do not want a perfect story. I want an honest one.
+              </span>
+            </span>
+          </button>
+          <button class="memory-card flip-memory" type="button" aria-pressed="false">
+            <span class="memory-face memory-front">
+              <span class="memory-number">03</span>
+              <span class="memory-icon" aria-hidden="true">∞</span>
+              <span class="memory-title">My hope</span>
+              <span class="memory-hint">Tap to read</span>
+            </span>
+            <span class="memory-face memory-back">
+              <span class="memory-title">A fresh start</span>
+              <span class="memory-copy">
+                I hope we can start with understanding, no pressure, and a heart that chooses
+                care over ego. Slowly, honestly, and with respect.
+              </span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="promise-section" aria-labelledby="promise-title">
+        <div class="promise-visual" aria-hidden="true">
+          <div class="mandala">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <div class="promise-photo-wrap">
+              <img src="assets/jyoti-promise.jpg" alt="" class="promise-photo" />
+            </div>
+          </div>
+        </div>
+        <div class="promise-copy">
+          <p class="eyebrow">My promise</p>
+          <h2 id="promise-title">My last honest try.</h2>
+          <p>
+            I know you may have moved on, and maybe today I am only a friend to you, or maybe
+            not even that. Still, this is my last try, with a lot of hope in my heart.
+          </p>
+          <p>
+            It is not easy for me to move on. We may not have met personally, but my feelings
+            are real. I like you, I care for you, and somewhere in my heart, I love you.
+          </p>
+          <p>
+            I am not saying this to put pressure on you. I am saying it because I do not want
+            to hide what I feel. Whatever your answer is, I will respect it.
+          </p>
+          <ul class="promise-list" aria-label="Promises">
+            <li><span></span> I will respect your feelings, even if they are different from mine.</li>
+            <li><span></span> I will not force you, blame you, or make you feel guilty.</li>
+            <li><span></span> If you give me a chance, I will value it with patience and honesty.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="question-section" id="question" aria-labelledby="question-title">
+        <div class="question-card">
+          <div class="question-sparkles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="snow-love" aria-hidden="true">
+            <span class="snow-head"></span>
+            <span class="snow-body"></span>
+            <span class="snow-arm snow-arm-left"></span>
+            <span class="snow-arm snow-arm-right"></span>
+            <span class="snow-heart">❤</span>
+          </div>
+          <p class="eyebrow">My question</p>
+          <h2 id="question-title"><span data-her-name>Jyoti</span>, will you give us a real chance?</h2>
+          <p>
+            If your heart feels even a little yes, I would be happy to begin this journey with
+            you. If you need time, I will respect that too, because your comfort matters to me.
+          </p>
+          <div class="effort-meter" aria-label="Effort behind this question">
+            <span>Hope</span>
+            <div class="meter-track"><span></span></div>
+            <span>Respect</span>
+          </div>
+          <div class="nervous-meter" aria-label="Abhay nervousness meter">
+            <div class="meter-label-row">
+              <span>Abhay's nervousness</span>
+              <strong>100%</strong>
+            </div>
+            <div class="nervous-track"><span></span></div>
+            <p class="chat-bubble">I practiced this in my head more times than I should admit.</p>
+          </div>
+          <div class="answer-row">
+            <button class="yes-btn" id="yesBtn" type="button">Give us a chance</button>
+            <button class="maybe-btn" id="maybeBtn" type="button">I need a little time</button>
+          </div>
+          <!-- <p class="selected-answer" id="selectedAnswerText" aria-live="polite"></p> -->
+          <p class="tiny-note">No pressure. Just one honest question from <span data-your-name>Abhay</span>.</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="answerModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <div class="modal-panel">
+        <button class="close-btn" id="closeModal" type="button" aria-label="Close">×</button>
+        <div class="burst" aria-hidden="true"></div>
+        <h2 id="modalTitle">You just made this page unforgettable.</h2>
+        <p id="modalText">
+          I am smiling already. Let us talk, laugh, and begin this properly, one beautiful step at a time.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
