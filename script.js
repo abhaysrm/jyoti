@@ -204,6 +204,7 @@ modal.addEventListener("click", (event) => {
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeModal();
 });
+}
 
 function setupTone() {
   const audioContextClass = window.AudioContext || window.webkitAudioContext;
@@ -383,4 +384,4 @@ setupStars();
 setupFlyingHearts();
 setupPointerGlow();
 setupScrollReveal();
-}
+
